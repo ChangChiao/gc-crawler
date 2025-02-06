@@ -1,0 +1,877 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Microsoft Azure 網站應用程式開發實戰 | 多奇數位創意</title>
+
+    <link rel="shortcut icon" href="/duotify_128x128.ico">
+    <link rel="bookmark" href="/duotify_128x128.ico">
+
+    <link rel="stylesheet" href="/assets/site.min.css">
+
+    <link rel="stylesheet" as="style" href="https://unpkg.com/aos@next/dist/aos.css" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"></noscript>
+
+    <link rel="stylesheet" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap"></noscript>
+
+    <link rel="stylesheet" as="style" href="https://unpkg.com/swiper/swiper-bundle.min.css" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"></noscript>
+
+    <meta name="description">
+    <meta name="keywords">
+    <meta property="og:url" content="https://www.duotify.com/Training/Detail/214">
+    <meta property="og:type" content="website">
+    <meta property="og:title">
+    <meta property="og:description">
+    <meta property="og:image" content="https://www.duotify.com/assets/images/top-logo-sm.6f0a7eb4.png">
+<script async="" src="https://www.clarity.ms/s/0.7.66/clarity.js"></script><script async="" src="https://www.clarity.ms/tag/gz8x7g5dz3?ref=gtm2"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-B55RF01RW9&amp;l=dataLayer&amp;cx=c&amp;gtm=45He51u0v9100914431za200"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5Z73T7X"></script><script type="text/javascript">!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
+src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js", // The SDK URL Source
+crossOrigin: "anonymous", 
+cfg: { // Application Insights Configuration
+    connectionString: 'InstrumentationKey=e13a4f9b-fff8-41c4-8a23-292e50548b71;IngestionEndpoint=https://eastasia-0.in.applicationinsights.azure.com/;LiveEndpoint=https://eastasia.livediagnostics.monitor.azure.com/'
+}});</script><script src="https://js.monitor.azure.com/scripts/b/ai.2.min.js" crossorigin="anonymous"></script></head>
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="">
+<div b-qt5xopj57h="" class="space nav"></div>
+
+
+<header class="top nav header">
+    <div class="container nav">
+        <div class="logo">
+            <a href="/">
+                <img src="/assets/images/duotify-logo01.svg" alt="多奇數位創意">
+            </a>
+        </div>
+        <div class="bar">
+            <input id="menu-toggle" type="checkbox"><span></span><span></span><span></span>
+        </div>
+        <div class="menu" id="menu">
+
+                    <div>
+                            <a href="/Consulting">顧問服務</a>
+                    </div>
+                    <div>
+                            <a href="/CaseShare">案例分享</a>
+                    </div>
+                    <div>
+                            <a class="active" href="/Training">教育訓練</a>
+                    </div>
+                    <div>
+                            <a href="/CloudProducts/TWCA-SSL">資訊雲端產品</a>
+                        <div class="sub-menu">
+                                <a href="/CloudProducts/TWCA-SSL">TWCA SSL 憑證</a>
+                                <a href="/CloudProducts/Azure">Microsoft Azure</a>
+                                <a href="/CloudProducts/Office">Microsoft 365</a>
+                        </div>
+                    </div>
+                    <div>
+                            <a href="/AboutUs">關於多奇</a>
+                    </div>
+                    <div>
+                            <a href="/JoinUs">加入多奇</a>
+                    </div>
+                    <div>
+                            <a href="/ContactUs">聯絡我們</a>
+                    </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<div class="breadcrumb-top">
+    <div class="breadcrumb container">
+        <span><a href="/Training">教育訓練</a></span><span>Microsoft Azure 網站應用程式開發實戰</span>
+    </div>
+</div>
+
+
+<div class="top online2">
+  <div class="top-content">
+    <div class="bg">
+      <img src="/assets/images/top-banner.6869f104.png" alt="">
+    </div>
+    <div class="circle">
+      <img src="/assets/images/circle.2e9740b0.svg" alt="">
+    </div>
+    <div class="carousel">
+      <img src="/assets/images/carousel.9082e485.svg" alt="">
+    </div>
+    <div class="ball"></div>
+    <div class="link"><a href="https://www.accupass.com/organizer/detail/1507090942441281249650" target="_blank"></a></div>
+    <div class="info-conteiner">
+      <div class="info"><div>2 天</div></div>
+      <div class="main-info">
+        <span class="customer">雲端技術類</span><span class="project-name">
+          Microsoft Azure 網站應用程式開發實戰</span><span class="detail">本課程著重在「網站應用程式」為主軸進行設計，幫助大家快速建立正確的雲端開發觀念，
+          有效利用 Azure Web App、SQL Database 與 Storage 等雲端服務，
+          建構一個近乎零管理 (Near-zero management)、高效能 (High Performance)、高可用性 (High Availability)、
+          高延展性 (High Scalability) 的雲端應用程式。</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block notice online2">
+  <div class="container">
+    <div class="first">
+      <h2>此課程適合給...</h2>
+      <ul>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <span>
+            <img class="check" src="/assets/images/check.3e46ae89.svg" alt="">以網站建置為主的開發人員
+          </span>
+        </li>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <span>
+            <img class="check" src="/assets/images/check.3e46ae89.svg" alt="">現有 ASP.NET MVC 開發人員
+          </span>
+        </li>            
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <span>
+            <img class="check" src="/assets/images/check.3e46ae89.svg" alt="">現有 ASP.NET Web Form 開發人員
+          </span>
+        </li>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <span>
+            <img class="check" src="/assets/images/check.3e46ae89.svg" alt="">企業網站開發部門經理/資訊部經理/MIS人員
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="dotted"></div>
+    <div class="second">
+      <h2>上完此課程你將會...</h2>
+      <ul>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <img class="check" src="/assets/images/check.3e46ae89.svg" alt=""><span>真正理解 PaaS 對企業帶來的效益
+            </span>
+        </li>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <img class="check" src="/assets/images/check.3e46ae89.svg" alt=""><span>了解使用 Azure Web App 的效益與優勢
+            </span>
+        </li>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <img class="check" src="/assets/images/check.3e46ae89.svg" alt=""><span>了解如何利用真實維運數據節省成本、提高效益
+            </span>
+        </li>               
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="block article online2">
+  <div class="container">
+    <p>
+      一間企業在經營的過程中，有太多大大小小的隱藏成本在消耗，其中最看不見的就是這些 IT 基礎建設，
+      感覺沒事就沒事，只要一出事就是大事。雲端平台出現之後，你終於可以將自己不擅長的部份「外包」出去，
+      透過平台提供的各項 IT 基礎建設，讓你專注於核心應用系統開發，不斷強化自身的核心競爭力，加速對市場的反應能力。
+    </p>
+    <p>
+      我們都知道雲端平台有 IaaS, PaaS 與 SaaS 三大分類，使用 IaaS 架構由於架構稍嫌複雜、成本偏高，
+      對於中小型客戶來說並不划算。使用 SaaS 大多只能針對既定的需求與服務進行選擇，缺乏許多客製化空間。
+      唯有 PaaS 可以兼具兩者優點，又能補強兩者不足之處。
+    </p>
+    <p>
+      透過 Microsoft Azure 的各式 PaaS 服務，不但能符合企業的低成本需求，更能在網站流量增加時動態提高網站的運算能力，
+      大大提升應用系統的彈性與應變能力，有許多你所不知道的應用與部署方式，都將在這堂課程中徹底展現。
+    </p> 
+    <p>
+      本課程著重在「網站應用程式」為主軸進行設計，幫助大家快速建立正確的雲端開發觀念，
+      有效利用 Azure Web App、SQL Database 與 Storage 等雲端服務，建構一個近乎零管理 (Near-zero management)、
+      高效能 (High Performance)、高可用性 (High Availability)、高延展性 (High Scalability) 的雲端應用程式。
+    </p>         
+  </div>
+</div>
+<div class="block course-content online2">
+  <div class="container">
+    <h2>課程內容</h2>
+    <div class="course-flex">
+      <div class="content aos-init" data-aos="custom-in" data-aos-easing="ease-in-out">
+        <ul class="chapter-list" id="online2-chapter-list">
+          <li class="chapter active">
+            <a>
+              <span class="text">
+                <span>認識 Microsoft Azure</span><span>（共 4 章）</span></span><img class="right-icon" src="/assets/images/course-content-right-blue.4cb91015.svg"><img class="right-active-icon" src="/assets/images/course-content-right-white.c1a54d3d.svg"><img class="diamond" src="/assets/images/course-content-right-active.db8a071c.svg"></a>
+            <div class="detail">
+              <div class="num">4</div>
+              <h3>認識 Microsoft Azure</h3>
+              <ul>
+                <li><span class="desc">了解 IaaS、PaaS 與 SaaS 架構</span>
+                </li>
+                <li>
+                  <span class="desc">了解雲端應用系統的部署方式</span>
+                </li>
+                <li>
+                  <span class="desc">認識 Microsoft Azure 基礎架構</span>
+                </li>
+                <li>
+                  <span class="desc">常見的雲端應用系統類型介紹</span>
+                </li>                              
+              </ul>
+            </div>
+          </li>
+          <li class="chapter">
+            <a>
+              <span class="text">
+                <span> Azure SQL Database</span><span>（共 8 章）</span></span><img class="right-icon" src="/assets/images/course-content-right-blue.4cb91015.svg"><img class="right-active-icon" src="/assets/images/course-content-right-white.c1a54d3d.svg"><img class="diamond" src="/assets/images/course-content-right-active.db8a071c.svg"></a>
+            <div class="detail">
+              <div class="num">8</div>
+              <h3>Azure SQL Database</h3>
+              <ul>
+                <li><span class="desc">了解 SQL Database 基礎架構</span>
+                </li>
+                <li>
+                  <span class="desc">使用 SQL Database 管理介面</span>
+                </li>
+                <li>
+                  <span class="desc">監控 SQL Database 效能資訊</span>
+                </li>
+                <li>
+                  <span class="desc">了解 SQL Database 災害復原機制</span>
+                </li>
+                <li>
+                  <span class="desc">認識 DTUs (Database Throughput Units)</span>
+                </li>
+                <li>
+                  <span class="desc">深入了解 DTUs 計算方式</span>
+                </li>
+                <li>
+                  <span class="desc">SQL Database 效能調校技巧</span>
+                </li>
+                <li>
+                  <span class="desc">了解 SQL Database 如何幫助你降低成本</span>
+                </li>                                    
+              </ul>
+            </div>
+          </li>
+          <li class="chapter">
+            <a>
+              <span class="text">
+                <span> Azure Web Apps</span><span>（共 11 章）</span></span><img class="right-icon" src="/assets/images/course-content-right-blue.4cb91015.svg"><img class="right-active-icon" src="/assets/images/course-content-right-white.c1a54d3d.svg"><img class="diamond" src="/assets/images/course-content-right-active.db8a071c.svg"></a>
+            <div class="detail">
+              <div class="num">11</div>
+              <h3>Azure Web Apps</h3>
+              <ul>
+                <li><span class="desc">了解 Web App 的架構與能力</span>
+                </li>
+                <li>
+                  <span class="desc">建立 Web App 與重要環境設定</span>
+                </li>
+                <li>
+                  <span class="desc">管理 Web App 執行環境 (Kudu)</span>
+                </li>
+                <li><span class="desc">監視 Web App 運作狀況</span>
+                </li>
+                <li>
+                  <span class="desc">應用程式診斷與遠端偵錯技巧</span>
+                </li>
+                <li>
+                  <span class="desc">應用程式設定與連接字串設定技巧</span>
+                </li>
+                <li><span class="desc">各種 Web App 部署方式</span>
+                </li>
+                <li><span class="desc">．FTP</span>
+                </li>
+                <li><span class="desc">．Dropbox / OneDrive</span>
+                </li>
+                <li><span class="desc">．Web Deploy</span>
+                </li>
+                <li><span class="desc">．Git (VSTS/GitHub/Bitbucket/Codeplex)</span>
+                </li>
+                <li><span class="desc">．本機 Git 儲存機制</span>
+                </li>
+                <li>
+                  <span class="desc">活用多重部署位置 (Deployment Slots)</span>
+                </li>
+                <li>
+                  <span class="desc">活用 Web 工作執行各式排程任務</span>
+                </li>
+                <li>
+                  <span class="desc">網站備份與還原機制</span>
+                </li>
+                <li>
+                  <span class="desc">透過 Scale Out 功能大幅降低網站營運成本</span>
+                </li>                                      
+              </ul>
+            </div>
+          </li>
+          <li class="chapter">
+            <a>
+              <span class="text">
+                <span>Azure Storage</span><span>（共 7 章）</span></span><img class="right-icon" src="/assets/images/course-content-right-blue.4cb91015.svg"><img class="right-active-icon" src="/assets/images/course-content-right-white.c1a54d3d.svg"><img class="diamond" src="/assets/images/course-content-right-active.db8a071c.svg"></a>
+            <div class="detail">
+              <div class="num">7</div>
+              <h3>Azure Storage</h3>
+              <ul>
+                <li><span class="desc">了解 Azure Storage 架構</span>
+                </li>
+                <li>
+                  <span class="desc">了解資料複寫與備援機制</span>
+                </li>
+                <li>
+                  <span class="desc">使用 Azure Storage 模擬器</span>
+                </li>
+                <li>
+                  <span class="desc">了解存取金鑰的使用方式</span>
+                </li>
+                <li>
+                  <span class="desc">認識 Blob Storage 與其開發方式</span>
+                </li>
+                <li>
+                  <span class="desc">認識 Queue Storage 與其開發方式</span>
+                </li>
+                <li>
+                  <span class="desc">認識 Table Storage 與其開發方式</span>
+                </li>                                                
+              </ul>
+            </div>
+          </li>
+          <li class="chapter">
+            <a>
+              <span class="text">
+                <span>實戰經驗分享</span><span>（共 3 章）</span></span><img class="right-icon" src="/assets/images/course-content-right-blue.4cb91015.svg"><img class="right-active-icon" src="/assets/images/course-content-right-white.c1a54d3d.svg"><img class="diamond" src="/assets/images/course-content-right-active.db8a071c.svg"></a>
+            <div class="detail">
+              <div class="num">3</div>
+              <h3>實戰經驗分享</h3>
+              <ul>
+                <li><span class="desc">Azure Web App 實戰經驗分享</span>
+                </li>
+                <li>
+                  <span class="desc">Azure SQL Database 實戰經驗分享</span>
+                </li>
+                <li>
+                  <span class="desc">Azure Storage 實戰經驗分享</span>
+                </li>                                                               
+              </ul>
+            </div>
+          </li>                    
+        </ul>
+      </div>
+      <div class="wrapper-detail" id="detail2-list">
+        <div class="pc-detail active">
+          <div class="num">4</div>
+          <h3>認識 Microsoft Azure</h3>
+          <ul>
+            <li><span class="desc">了解 IaaS、PaaS 與 SaaS 架構</span>
+            </li>
+            <li>
+              <span class="desc">了解雲端應用系統的部署方式</span>
+            </li>
+            <li>
+              <span class="desc">認識 Microsoft Azure 基礎架構</span>
+            </li>
+            <li>
+              <span class="desc">常見的雲端應用系統類型介紹</span>
+            </li>                              
+          </ul>
+        </div>
+        <div class="pc-detail">
+          <div class="num">8</div>
+          <h3>Azure SQL Database</h3>
+          <ul>
+            <li><span class="desc">了解 SQL Database 基礎架構</span>
+            </li>
+            <li>
+              <span class="desc">使用 SQL Database 管理介面</span>
+            </li>
+            <li>
+              <span class="desc">監控 SQL Database 效能資訊</span>
+            </li>
+            <li>
+              <span class="desc">了解 SQL Database 災害復原機制</span>
+            </li>
+            <li>
+              <span class="desc">認識 DTUs (Database Throughput Units)</span>
+            </li>
+            <li>
+              <span class="desc">深入了解 DTUs 計算方式</span>
+            </li>
+            <li>
+              <span class="desc">SQL Database 效能調校技巧</span>
+            </li>
+            <li>
+              <span class="desc">了解 SQL Database 如何幫助你降低成本</span>
+            </li>                                    
+          </ul>
+        </div>
+        <div class="pc-detail">
+          <div class="num">11</div>
+          <h3>Azure Web Apps</h3>
+          <ul>
+            <li><span class="desc">了解 Web App 的架構與能力</span>
+            </li>
+            <li>
+              <span class="desc">建立 Web App 與重要環境設定</span>
+            </li>
+            <li>
+              <span class="desc">管理 Web App 執行環境 (Kudu)</span>
+            </li>
+            <li><span class="desc">監視 Web App 運作狀況</span>
+            </li>
+            <li>
+              <span class="desc">應用程式診斷與遠端偵錯技巧</span>
+            </li>
+            <li>
+              <span class="desc">應用程式設定與連接字串設定技巧</span>
+            </li>
+            <li><span class="desc">各種 Web App 部署方式</span>
+            </li>
+            <li><span class="desc">．FTP</span>
+            </li>
+            <li><span class="desc">．Dropbox / OneDrive</span>
+            </li>
+            <li><span class="desc">．Web Deploy</span>
+            </li>
+            <li><span class="desc">．Git (VSTS/GitHub/Bitbucket/Codeplex)</span>
+            </li>
+            <li><span class="desc">．本機 Git 儲存機制</span>
+            </li>
+            <li>
+              <span class="desc">活用多重部署位置 (Deployment Slots)</span>
+            </li>
+            <li>
+              <span class="desc">活用 Web 工作執行各式排程任務</span>
+            </li>
+            <li>
+              <span class="desc">網站備份與還原機制</span>
+            </li>
+            <li>
+              <span class="desc">透過 Scale Out 功能大幅降低網站營運成本</span>
+            </li>                                      
+          </ul>
+        </div>
+        <div class="pc-detail">
+          <div class="num">7</div>
+          <h3>Azure Storage</h3>
+          <ul>
+            <li><span class="desc">了解 Azure Storage 架構</span>
+            </li>
+            <li>
+              <span class="desc">了解資料複寫與備援機制</span>
+            </li>
+            <li>
+              <span class="desc">使用 Azure Storage 模擬器</span>
+            </li>
+            <li>
+              <span class="desc">了解存取金鑰的使用方式</span>
+            </li>
+            <li>
+              <span class="desc">認識 Blob Storage 與其開發方式</span>
+            </li>
+            <li>
+              <span class="desc">認識 Queue Storage 與其開發方式</span>
+            </li>
+            <li>
+              <span class="desc">認識 Table Storage 與其開發方式</span>
+            </li>                                                
+          </ul>
+        </div>
+        <div class="pc-detail">
+          <div class="num">3</div>
+          <h3>實戰經驗分享</h3>
+          <ul>
+            <li><span class="desc">Azure Web App 實戰經驗分享</span>
+            </li>
+            <li>
+              <span class="desc">Azure SQL Database 實戰經驗分享</span>
+            </li>
+            <li>
+              <span class="desc">Azure Storage 實戰經驗分享</span>
+            </li>                                                               
+          </ul>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block lecturer online2">
+  <div class="container">
+    <h2>講師介紹</h2>
+    <div class="intro">
+      <img class="avatar aos-init" data-aos="custom-in" data-aos-easing="ease-in-out" src="/file/半身照_957x957_638024505414130637.jpg" alt="">
+      <div>
+        <div class="name">
+          <h3>Will 保哥</h3>
+          <span>(黃保翕)</span>
+        </div>
+        <p>2019 年獲選 Microsoft Regional Director (RD) 微軟技術社群區域總監</p>
+        <p>2018 年榮獲 Angular/Web GDE (Google Developer Expert) 開發專家</p>
+        <p>
+          2008 至今連續 17 度當選 Microsoft MVP 微軟最有價值專家 (Developer
+          Technologies)。
+        </p>
+        <p>
+          2013 年曾獲選第 6
+          屆iT邦幫忙鐵人賽【iT邦幫忙鐵人賽年度大獎】、【開發技術組年度鐵人】、【iT邦幫忙鐵人賽優選】三項殊榮。
+        </p>
+        <p>
+          熟悉 Angular、JavaScript、.NET、C#、ASP.NET
+          MVC、Go、Docker、Kubernetes 相關技術。擅長 DevOps
+          與組織文化建立、軟體團隊建構與管理。熱愛分享知識。
+        </p>
+        <p>
+          曾擔任 Visual Studio 2010 上市發表會講師、MSDN 講座講師、TechDays
+          Taiwan 2010~2015 講師、TechEd China 2011, 2013 講師。
+        </p>
+        <p>
+          出版著作有 ASP.NET MVC 2 開發實戰、Windows Phone 開發實戰、ASP.NET MVC
+          4 開發實戰等書籍。
+        </p>
+        <p>
+          <a href="http://blog.miniasp.com/">部落格 http://blog.miniasp.com</a>
+        </p>
+        <p>
+          <a href="https://www.facebook.com/will.fans/">FB 粉絲頁 https://www.facebook.com/will.fans</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="feedback bg_blue">
+  <div class="content title"><span>學員回饋</span></div>
+  <div class="content">
+    <div class="swiper feedbackSwiper aos-init swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden" data-aos="zoom-out" data-duration="1000" data-aos-easing="ease-in-out">
+      <div class="swiper-wrapper" id="swiper-wrapper-f16e3d1dee15c847" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(-1524px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="2 / 4" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員B</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                對於 Azure 的 Web app 擴展方式有更精深的了解，並且之前使用 blob 有一些問題，在這門課上也有介紹。
+              </p>
+            </div>
+          </div>
+        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="3 / 4" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員C</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                我完全對 Azure 不熟悉，本來怕會完全聽不懂或跟不上，但保哥講得非常白話也非常詳細，
+                讓我對 Azure 有初步了解，不會感到害怕，我覺得十分有收穫。 
+              </p>
+            </div>
+          </div>
+        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" role="group" aria-label="4 / 4" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員D</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                對 Azure 有初階的認識，透過實際操作對於如何應用在資料庫、程式版控、網頁開發，相容性極高，
+                可能要透過一定的資源分析，才能決定成本較低，最適合的方案，以及應用層面。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員A</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+            <p>
+              這次聽完 Microsoft Azure 講師保哥介紹功能，
+              瞭解IT人員需要先瞭解公司網站架構及設定，
+              除了集中管理也加強了資料安全與服務穩定度，
+              最終也可以替公司精確彈性的節省網站花費成本。
+            </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="2 / 4" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員B</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                對於 Azure 的 Web app 擴展方式有更精深的了解，並且之前使用 blob 有一些問題，在這門課上也有介紹。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3 / 4" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員C</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                我完全對 Azure 不熟悉，本來怕會完全聽不懂或跟不上，但保哥講得非常白話也非常詳細，
+                讓我對 Azure 有初步了解，不會感到害怕，我覺得十分有收穫。 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="3" role="group" aria-label="4 / 4" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員D</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                對 Azure 有初階的認識，透過實際操作對於如何應用在資料庫、程式版控、網頁開發，相容性極高，
+                可能要透過一定的資源分析，才能決定成本較低，最適合的方案，以及應用層面。
+              </p>
+            </div>
+          </div>
+        </div>        
+      <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="1 / 4" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員A</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+            <p>
+              這次聽完 Microsoft Azure 講師保哥介紹功能，
+              瞭解IT人員需要先瞭解公司網站架構及設定，
+              除了集中管理也加強了資料安全與服務穩定度，
+              最終也可以替公司精確彈性的節省網站花費成本。
+            </p>
+            </div>
+          </div>
+        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="2 / 4" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員B</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                對於 Azure 的 Web app 擴展方式有更精深的了解，並且之前使用 blob 有一些問題，在這門課上也有介紹。
+              </p>
+            </div>
+          </div>
+        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="3 / 4" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員C</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                我完全對 Azure 不熟悉，本來怕會完全聽不懂或跟不上，但保哥講得非常白話也非常詳細，
+                讓我對 Azure 有初步了解，不會感到害怕，我覺得十分有收穫。 
+              </p>
+            </div>
+          </div>
+        </div></div>
+      <div class="swiper-pagination feedback-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+  </div>
+</div>
+<div class="logos online2">
+<div class="logos-content">
+<div class="logo_wrap">
+<img src="/assets/images/CUB.dbe5c12c.png" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/亞家logo.4e27c302.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/CT.6f3f0cb1.png" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/資拓logo.926b351e.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/頎邦logo.1f636b30.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/pchomelogo.a94e01b9.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/台北富邦銀行logo.e55e76aa.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/edelogo.fbdfb935.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/新光銀logo.5192ace9.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/錠嵂.348bb9c3.png" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/資訊工業.14b4eb2f.png" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/hilifelogo.a58a649c.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/元智logo.479c1e97.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/特力屋.97836f31.png" alt="">
+</div>
+</div>
+</div><div class="top contact-us">
+    <div class="top-container">
+        <div>
+            <img src="/assets/images/contact-us.ce4c135d.svg" alt="Contact Us" loading="lazy"><span>聯絡多奇</span>
+        </div>
+        <span>聯絡多奇為您提供最專業的協助！</span>
+    </div>
+</div>
+<div class="form contact-us">
+    <div class="form-container">
+        <form class="form-content" id="mainContactForm" autocomplete="off">
+            <input type="hidden" id="recaptchaToken" name="recaptchaToken" value="">
+            <div class="bg-img">
+                <img class="lg" src="/assets/images/bg.dfd3e318.png" alt="background image" loading="lazy">
+                <img class="sm" src="/assets/images/bg-sm.54a0cebc.png" alt="background image" loading="lazy">
+            </div>
+            <div class="form-input-field">
+                <label class="title" for="name">請問該如何稱呼您？</label>
+                <input type="text" id="name" name="name" required="" oninvalid="this.setCustomValidity('請填寫這個欄位')" oninput="this.setCustomValidity('');">
+            </div>
+            <div class="form-input-field">
+                <label class="title" for="email">電子信箱</label>
+                <input type="email" id="email" name="email" required="" oninvalid="this.setCustomValidity('請填寫這個欄位及確認 e-mail 格式正確 (地址包含@)')" oninput="this.setCustomValidity('');">
+            </div>
+            <div class="form-input-field">
+                <label class="title" for="tel">電話號碼</label>
+                <input type="tel" id="tel" name="tel" maxlength="30" required="" oninvalid="this.setCustomValidity('請填寫這個欄位，長度限制 30 字')" oninput="this.setCustomValidity('');">
+            </div>
+            <div class="form-input-field">
+                <label class="title" for="message">請問該如何協助您？</label>
+                <textarea rows="4" id="message" name="message" required="" oninvalid="this.setCustomValidity('請填寫這個欄位')" oninput="this.setCustomValidity('');"></textarea>
+            </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8B8pZjNM3xtLgFS0wg0AHZvr22COJHnfmCTqGqS4TwdC3wW1BKnmmHp0yiO3vfeRIENi6I5Rn7p0iX4hZE5H-LMxA2JkHEZqj_s7VPKXUIGvx0df_TWcu_wwD2T2SSO0B-yyRI5y7c3ujWn0jUn_UCw">
+            <button class="submit" type="submit">
+                <span class="text">提交</span><span class="bg"></span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<script src="/assets/contact.min.js" defer="" async=""></script>
+
+
+<footer>
+    <div class="container footer">
+        <div class="left">
+                <div class="block">
+                    <h2>
+                            <a href="/Consulting">顧問服務</a>
+                    </h2>
+                </div>
+                <div class="block">
+                    <h2>
+                            <a href="/CaseShare">案例分享</a>
+                    </h2>
+                </div>
+                <div class="block">
+                    <h2>
+                            <a href="/Training">教育訓練</a>
+                    </h2>
+                </div>
+                <div class="block">
+                    <h2>
+資訊雲端產品                    </h2>
+                            <a href="/CloudProducts/TWCA-SSL">TWCA SSL 憑證</a>
+                            <a href="/CloudProducts/Azure">Microsoft Azure</a>
+                            <a href="/CloudProducts/Office">Microsoft 365</a>
+                </div>
+                <div class="block">
+                    <h2>
+                            <a href="/AboutUs">關於多奇</a>
+                    </h2>
+                </div>
+                <div class="block">
+                    <h2>
+                            <a href="/JoinUs">加入多奇</a>
+                    </h2>
+                </div>
+                <div class="block">
+                    <h2>
+                            <a href="/ContactUs">聯絡我們</a>
+                    </h2>
+                </div>
+                <div class="block">
+                    <h2>
+                            <a href="/PrivacyPolicy">隱私權條款</a>
+                    </h2>
+                </div>
+        </div>
+        <div class="right">
+            <div>
+                <h2>公司資訊</h2>
+                <div class="block">
+                    <div class="icon">
+                        <img src="/assets/images/addr.4cdfc1a1.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <div>地址：</div>
+                        <div>台北市中山區中山北路一段82號7樓</div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="icon">
+                        <img src="/assets/images/phone.c5588c95.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <div>電話：</div>
+                        <div>(02)2322-2480 #10</div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="icon">
+                        <img src="/assets/images/fax.092bd7a5.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <div>傳真：</div>
+                        <div>(02)2341-8318</div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="icon">
+                        <img src="/assets/images/mail.e55729eb.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <div>Mail：</div>
+                        <div>service@miniasp.com</div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="icon">
+                        <img src="/assets/images/work.dac4d47e.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <div>上班時間：</div>
+                        <div>每周一 ～ 周五： 9am to 6pm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<script defer="" src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script defer="" src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/MotionPathPlugin.min.js"></script>
+<script defer="" src="/assets/site.min.js?r=2"></script>
+
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5Z73T7X');</script>
+
+
+
+<script type="text/javascript" id="" charset="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g+"?ref\x3dgtm2";d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","gz8x7g5dz3");</script></body></html>

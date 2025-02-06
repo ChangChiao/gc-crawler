@@ -1,0 +1,842 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>實戰 E2E 測試：使用 Playwright 測試框架 | 多奇數位創意</title>
+
+    <link rel="shortcut icon" href="/duotify_128x128.ico">
+    <link rel="bookmark" href="/duotify_128x128.ico">
+
+    <link rel="stylesheet" href="/assets/site.min.css">
+
+    <link rel="stylesheet" as="style" href="https://unpkg.com/aos@next/dist/aos.css" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"></noscript>
+
+    <link rel="stylesheet" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&amp;family=Noto+Sans:wght@400;500;600;700&amp;display=swap"></noscript>
+
+    <link rel="stylesheet" as="style" href="https://unpkg.com/swiper/swiper-bundle.min.css" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"></noscript>
+
+    <meta name="description">
+    <meta name="keywords">
+    <meta property="og:url" content="https://www.duotify.com/Training/Detail/298">
+    <meta property="og:type" content="website">
+    <meta property="og:title">
+    <meta property="og:description">
+    <meta property="og:image" content="https://www.duotify.com/assets/images/top-logo-sm.6f0a7eb4.png">
+<script async="" src="https://www.clarity.ms/s/0.7.66/clarity.js"></script><script async="" src="https://www.clarity.ms/tag/gz8x7g5dz3?ref=gtm2"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-B55RF01RW9&amp;l=dataLayer&amp;cx=c&amp;gtm=45He51u0v9100914431za200"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5Z73T7X"></script><script type="text/javascript">!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
+src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js", // The SDK URL Source
+crossOrigin: "anonymous", 
+cfg: { // Application Insights Configuration
+    connectionString: 'InstrumentationKey=e13a4f9b-fff8-41c4-8a23-292e50548b71;IngestionEndpoint=https://eastasia-0.in.applicationinsights.azure.com/;LiveEndpoint=https://eastasia.livediagnostics.monitor.azure.com/'
+}});</script><script src="https://js.monitor.azure.com/scripts/b/ai.2.min.js" crossorigin="anonymous"></script></head>
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="">
+<div b-qt5xopj57h="" class="space nav"></div>
+
+
+<header class="top nav header">
+    <div class="container nav">
+        <div class="logo">
+            <a href="/">
+                <img src="/assets/images/duotify-logo01.svg" alt="多奇數位創意">
+            </a>
+        </div>
+        <div class="bar">
+            <input id="menu-toggle" type="checkbox"><span></span><span></span><span></span>
+        </div>
+        <div class="menu" id="menu">
+
+                    <div>
+                            <a href="/Consulting">顧問服務</a>
+                    </div>
+                    <div>
+                            <a href="/CaseShare">案例分享</a>
+                    </div>
+                    <div>
+                            <a class="active" href="/Training">教育訓練</a>
+                    </div>
+                    <div>
+                            <a href="/CloudProducts/TWCA-SSL">資訊雲端產品</a>
+                        <div class="sub-menu">
+                                <a href="/CloudProducts/TWCA-SSL">TWCA SSL 憑證</a>
+                                <a href="/CloudProducts/Azure">Microsoft Azure</a>
+                                <a href="/CloudProducts/Office">Microsoft 365</a>
+                        </div>
+                    </div>
+                    <div>
+                            <a href="/AboutUs">關於多奇</a>
+                    </div>
+                    <div>
+                            <a href="/JoinUs">加入多奇</a>
+                    </div>
+                    <div>
+                            <a href="/ContactUs">聯絡我們</a>
+                    </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<div class="breadcrumb-top">
+    <div class="breadcrumb container">
+        <span><a href="/Training">教育訓練</a></span><span>實戰 E2E 測試：使用 Playwright 測試框架</span>
+    </div>
+</div>
+
+
+<div class="top online2">
+  <div class="top-content">
+    <div class="bg">
+      <img src="/assets/images/top-banner.6869f104.png" alt="">
+    </div>
+    <div class="circle">
+      <img src="/assets/images/circle.2e9740b0.svg" alt="">
+    </div>
+    <div class="carousel">
+      <img src="/assets/images/carousel.9082e485.svg" alt="">
+    </div>
+    <div class="ball"></div>
+   <div class="link"><a href="https://www.accupass.com/organizer/detail/1507090942441281249650" target="_blank"></a></div>
+    <div class="info-conteiner">
+      <div class="info"><div>1 天</div></div>
+      <div class="main-info">
+        <span class="customer">自動測試技術類</span><span class="project-name">
+          實戰 E2E 測試：使用 Playwright 測試框架</span><span class="detail">這堂課程將帶你快速掌握 Playwright 的核心概念和實戰技巧，幫助你在短時間內了解並掌握端對端測試的核心概念。
+          保哥不但會在課堂上鉅細靡遺的介紹其觀念與工具用法，更會幫助你點出各種實務上 E2E 測試會面臨的困難與解決方案。</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block notice online2">
+  <div class="container">
+    <div class="first">
+      <h2>此課程適合給...</h2>
+      <ul>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <span>
+            <img class="check" src="/assets/images/check.3e46ae89.svg" alt="">渴望學習端對端測試的新手或經驗豐富的開發者
+          </span>
+        </li>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <span>
+            <img class="check" src="/assets/images/check.3e46ae89.svg" alt="">對網頁應用測試有興趣並希望提升測試技能的人
+          </span>
+        </li>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <span>
+            <img class="check" src="/assets/images/check.3e46ae89.svg" alt="">希望將 E2E 測試整合至 CI/CD 流程中的 DevOps 工程師
+          </span>
+        </li>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <span>
+            <img class="check" src="/assets/images/check.3e46ae89.svg" alt="">渴望瞭解 Playwright 並瞭解實務上如何運用的測試工程師
+          </span>
+        </li>    
+      </ul>
+    </div>
+    <div class="dotted"></div>
+    <div class="second">
+      <h2>上完此課程你將會...</h2>
+      <ul>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <img class="check" src="/assets/images/check.3e46ae89.svg" alt=""><span>深入了解端對端測試的核心概念與重要性</span>
+        </li>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <img class="check" src="/assets/images/check.3e46ae89.svg" alt=""><span>掌握 Playwright 測試框架的安裝與配置
+            </span>
+        </li>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <img class="check" src="/assets/images/check.3e46ae89.svg" alt=""><span>學會使用 Playwright 編寫各種自動化測試腳本
+            </span>
+        </li>
+        <li data-aos="custom-in" data-aos-easing="ease-in-out" class="aos-init">
+          <img class="check" src="/assets/images/check.3e46ae89.svg" alt=""><span>了解如何整合 Playwright 至 CI 流程中
+            </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="block article online2">
+  <div class="container">
+    <p>
+      你是不是也曾面臨這樣的困境？明明 Playwright 這麼好用，為什麼就是寫不出高效的 E2E 測試？
+      別擔心，你並不孤單！這堂課就是為了你而設計的！
+    </p>
+    <p>
+      在現代的軟體開發中，自動化測試不僅是一種最佳實踐，更是保障軟體品質與穩定性的關鍵。特別是端對端 (E2E) 測試，
+      它能模擬使用者操作，確保應用程式的各個功能在實際運行環境中的一致性。
+      本課程專為想要深入學習並掌握 E2E 自動化測試的開發者而設計，並以 Playwright 為主要的測試開發框架，
+      課程內容不僅涵蓋 E2E 的基礎知識，還包含豐富的 Playwright 實戰演練展示，
+      以及分享端對端測試在實戰環境中面臨的挑戰與相對應的解決方案，帶領學員掌握端對端測試的實務經驗，
+      體驗 Playwright 的強大功能。
+    </p>
+    <p>
+      說實在的，Playwright 這套測試框架真的很強大，也很好學，官方的文件也寫的很好，
+      更重要的是，它的 API 設計得超讚，若跟 Selenium 比起來，那真的是兩個完全不同世代的設計。
+      但有趣的地方是，我在公司內部推廣時，每個人都覺得很好，但大部分人都還是停留在「感覺很好」的階段而已，
+      實際寫下去之後問題還是一大堆，許多情境下就是會一直卡關，開發效率極差。我認為這個問題必須被解決，
+      也是我想要開這堂課的原因之一。
+    </p>
+    <p>
+      我常常會納悶， 如果大家都說一個工具很好用，但是實際上卻很少人真的用得好，那是為什麼呢？我在進一步研究後發現，
+      人工的端對端測試雖然沒效率，工作的重複性又高，當你在嘗試撰寫自動化測試的時候一直鬼打牆，
+      開發時程就會變的非常不可控，因此在時間的壓力下，大部分的人會選擇放棄嘗試，繼續採用「人工測試」來應付工作。
+      你可能會納悶，這樣不會花更多時間做測試嗎？公司成本不是會墊高？但我說真的，人工測試導致時間不夠，
+      老闆或 PM 不會怪你，只會怪人手不足、資源不足，火不太會燒到測試人員的頭上。
+      但你若開始嘗試了大部分人不敢嘗試的自動化測試，當你在時間內無法交付測試報告的時候，倒大楣的就是你！
+    </p>
+    <p>
+      這堂課程將帶你快速掌握 Playwright 的核心概念和實戰技巧，幫助你在短時間內了解並掌握端對端測試的核心概念。
+      保哥不但會在課堂上鉅細靡遺的介紹其觀念與工具用法，更會幫助你點出各種實務上 E2E 測試會面臨的困難與解決方案。
+    </p>    
+  </div>
+</div>
+<div class="block course-content online2">
+  <div class="container">
+    <h2>課程內容</h2>
+    <div class="course-flex">
+      <div class="content aos-init" data-aos="custom-in" data-aos-easing="ease-in-out">
+        <ul class="chapter-list" id="online2-chapter-list">
+          <li class="chapter active">
+            <a>
+              <span class="text">
+                <span>端對端測試的基礎概念</span><span>（共 4 章）</span></span><img class="right-icon" src="/assets/images/course-content-right-blue.4cb91015.svg"><img class="right-active-icon" src="/assets/images/course-content-right-white.c1a54d3d.svg"><img class="diamond" src="/assets/images/course-content-right-active.db8a071c.svg"></a>
+            <div class="detail">
+              <div class="num">4</div>
+              <h3>端對端測試的基礎概念</h3>
+              <ul>
+                <li>
+                  <span class="desc">什麼是端對端測試？</span>
+                </li>
+                <li>
+                  <span class="desc">單元測試、整合測試與端對端測試的差異</span>
+                </li>
+                <li>
+                  <span class="desc">端對端測試在軟體開發中的角色與意義</span>
+                </li>
+                <li>
+                  <span class="desc">深入理解 E2E 測試真正的難點與挑戰</span>
+                </li>                              
+              </ul>
+            </div>
+           </li>
+           <li class="chapter">
+            <a>
+              <span class="text">
+                <span>初探 Playwright 測試框架</span><span>（共 3 章）</span></span><img class="right-icon" src="/assets/images/course-content-right-blue.4cb91015.svg"><img class="right-active-icon" src="/assets/images/course-content-right-white.c1a54d3d.svg"><img class="diamond" src="/assets/images/course-content-right-active.db8a071c.svg"></a>
+            <div class="detail">
+              <div class="num">3</div>
+              <h3>初探 Playwright 測試框架</h3>
+              <ul>
+                <li>
+                  <span class="desc">Playwright 運作架構與基本測試結構</span>
+                </li>
+                <li>
+                  <span class="desc">Playwright 相較於其他測試框架的優勢</span>
+                </li>
+                <li>
+                  <span class="desc">Playwright 新手上路指南</span>
+                </li>               
+              </ul>
+            </div>
+          </li>
+           <li class="chapter">
+            <a>
+              <span class="text">
+                <span>掌握 Playwright 自動化撰寫測試的技巧</span><span>（共 5 章）</span></span><img class="right-icon" src="/assets/images/course-content-right-blue.4cb91015.svg"><img class="right-active-icon" src="/assets/images/course-content-right-white.c1a54d3d.svg"><img class="diamond" src="/assets/images/course-content-right-active.db8a071c.svg"></a>
+            <div class="detail">
+              <div class="num">5</div>
+              <h3>掌握 Playwright 自動化撰寫測試的技巧</h3>
+              <ul>                
+                <li>
+                  <span class="desc">深入展示 Playwright 開發流程</span>
+                </li>
+                <li>
+                  <span class="desc">展示使用 CLI 工具輔助開發</span>
+                </li>
+                <li>
+                  <span class="desc">展示使用 VS Code 工具輔助開發</span>
+                </li>
+                <li>
+                  <span class="desc">展示使用 F12 DevTool 工具輔助開發</span>
+                </li>
+                <li>
+                  <span class="desc">展示使用 GitHub Copilot 工具輔助開發發</span>
+                </li>                
+              </ul>
+            </div>
+          </li>
+          <li class="chapter">
+            <a>
+              <span class="text">
+                <span> 實務中常用的 Playwright 核心功能</span><span>（共 6 章）</span></span><img class="right-icon" src="/assets/images/course-content-right-blue.4cb91015.svg"><img class="right-active-icon" src="/assets/images/course-content-right-white.c1a54d3d.svg"><img class="diamond" src="/assets/images/course-content-right-active.db8a071c.svg"></a>
+            <div class="detail">
+              <div class="num">6</div>
+              <h3>實務中常用的 Playwright 核心功能</h3>
+              <ul>
+                <li><span class="desc">元素選取與操作：學習如何定位頁面元素</span>
+                </li>
+                <li>
+                  <span class="desc">事件模擬：模擬滑鼠點擊、鍵盤輸入、拖曳等操作</span>
+                </li>
+                <li>
+                  <span class="desc">自動等待與錯誤處理：提升測試腳本的穩定性與可靠性</span>
+                </li>
+                <li>
+                  <span class="desc">多瀏覽器支援：同時在多個瀏覽器中運行測試</span>
+                </li>
+                <li>
+                  <span class="desc">截圖和錄製影片：記錄測試過程與結果</span>
+                </li>
+                <li>
+                  <span class="desc">測試報告與結果分析：如何有效分析測試結果</span>
+                </li>                
+              </ul>
+            </div>
+          </li> 
+          <li class="chapter">
+            <a>
+              <span class="text">
+                <span> 經驗分享 (Best Practice)</span><span>（共 5 章）</span></span><img class="right-icon" src="/assets/images/course-content-right-blue.4cb91015.svg"><img class="right-active-icon" src="/assets/images/course-content-right-white.c1a54d3d.svg"><img class="diamond" src="/assets/images/course-content-right-active.db8a071c.svg"></a>
+            <div class="detail">
+              <div class="num">5</div>
+              <h3>經驗分享 (Best Practice)</h3>
+              <ul>
+                <li><span class="desc">分享自動化測試成功導入的秘訣</span>
+                </li>
+                <li>
+                  <span class="desc">分享無法落實自動化測試的解決方案</span>
+                </li>
+                <li>
+                  <span class="desc">如何與團隊合作，共同推動自動化測試</span>
+                </li>
+                <li>
+                  <span class="desc">整合 Playwright 至持續整合(CI)流程中</span>
+                </li>
+                <li>
+                  <span class="desc">提升自動化測試開發效率與品質的重要心法果</span>
+                </li>                          
+              </ul>
+            </div>
+          </li>         
+        </ul>
+      </div>
+      <div class="wrapper-detail" id="detail2-list">
+        <div class="pc-detail active">
+          <div class="num">4</div>
+          <h3>端對端測試的基礎概念</h3>
+          <ul>
+            <li><span class="desc">什麼是端對端測試？</span>
+            </li>
+            <li>
+              <span class="desc">單元測試、整合測試與端對端測試的差異</span>
+            </li>
+            <li>
+              <span class="desc">端對端測試在軟體開發中的角色與意義</span>
+            </li>
+            <li>
+              <span class="desc">深入理解 E2E 測試真正的難點與挑戰</span>
+            </li>                
+          </ul>
+        </div>
+        <div class="pc-detail">
+          <div class="num">3</div>
+          <h3>初探 Playwright 測試框架</h3>
+          <ul>
+            <li>
+              <span class="desc">Playwright 運作架構與基本測試結構</span>
+            </li>
+            <li>
+              <span class="desc">Playwright 相較於其他測試框架的優勢</span>
+            </li>
+            <li>
+              <span class="desc">Playwright 新手上路指南</span>
+            </li>                           
+          </ul>
+        </div>
+        <div class="pc-detail">
+          <div class="num">5</div>
+          <h3>掌握 Playwright 自動化撰寫測試的技巧</h3>
+          <ul>                
+            <li>
+              <span class="desc">深入展示 Playwright 開發流程</span>
+            </li>
+            <li>
+              <span class="desc">展示使用 CLI 工具輔助開發</span>
+            </li>
+            <li>
+              <span class="desc">展示使用 VS Code 工具輔助開發</span>
+            </li>
+            <li>
+              <span class="desc">展示使用 F12 DevTool 工具輔助開發</span>
+            </li>
+            <li>
+              <span class="desc">展示使用 GitHub Copilot 工具輔助開發</span>
+            </li>                
+          </ul>
+        </div>
+        <div class="pc-detail">
+          <div class="num">6</div>
+          <h3>實務中常用的 Playwright 核心功能</h3>
+          <ul>
+            <li><span class="desc">元素選取與操作：學習如何定位頁面元素</span>
+            </li>
+            <li>
+              <span class="desc">事件模擬：模擬滑鼠點擊、鍵盤輸入、拖曳等操作</span>
+            </li>
+            <li>
+              <span class="desc">自動等待與錯誤處理：提升測試腳本的穩定性與可靠性</span>
+            </li>
+            <li>
+              <span class="desc">多瀏覽器支援：同時在多個瀏覽器中運行測試</span>
+            </li>
+            <li>
+              <span class="desc">截圖和錄製影片：記錄測試過程與結果</span>
+            </li> 
+            <li>
+              <span class="desc">測試報告與結果分析：如何有效分析測試結果</span>
+            </li>                 
+          </ul>
+        </div>
+        <div class="pc-detail">
+          <div class="num">5</div>
+          <h3>經驗分享 (Best Practice)</h3>
+          <ul>
+            <li><span class="desc">分享自動化測試成功導入的秘訣</span>
+            </li>
+            <li>
+              <span class="desc">分享無法落實自動化測試的解決方案</span>
+            </li>
+            <li>
+              <span class="desc">如何與團隊合作，共同推動自動化測試</span>
+            </li>
+            <li>
+              <span class="desc">整合 Playwright 至持續整合(CI)流程中</span>
+            </li>
+            <li>
+              <span class="desc">提升自動化測試開發效率與品質的重要心法</span>
+            </li>                   
+          </ul>
+        </div>                
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block lecturer online2">
+  <div class="container">
+    <h2>講師介紹</h2>
+    <div class="intro">
+      <img class="avatar aos-init" data-aos="custom-in" data-aos-easing="ease-in-out" src="/file/半身照_957x957_638024505414130637.jpg" alt="">
+      <div>
+        <div class="name">
+          <h3>Will 保哥</h3>
+          <span>(黃保翕)</span>
+        </div>
+        <p>2019 年獲選 Microsoft Regional Director (RD) 微軟技術社群區域總監</p>
+        <p>2018 年榮獲 Angular/Web GDE (Google Developer Expert) 開發專家</p>
+        <p>
+          2008 至今連續 17 度當選 Microsoft MVP 微軟最有價值專家 (Developer
+          Technologies)。
+        </p>
+        <p>
+          2013 年曾獲選第 6
+          屆iT邦幫忙鐵人賽【iT邦幫忙鐵人賽年度大獎】、【開發技術組年度鐵人】、【iT邦幫忙鐵人賽優選】三項殊榮。
+        </p>
+        <p>
+          熟悉 Angular、JavaScript、.NET、C#、ASP.NET
+          MVC、Go、Docker、Kubernetes 相關技術。擅長 DevOps
+          與組織文化建立、軟體團隊建構與管理。熱愛分享知識。
+        </p>
+        <p>
+          曾擔任 Visual Studio 2010 上市發表會講師、MSDN 講座講師、TechDays
+          Taiwan 2010~2015 講師、TechEd China 2011, 2013 講師。
+        </p>
+        <p>
+          出版著作有 ASP.NET MVC 2 開發實戰、Windows Phone 開發實戰、ASP.NET MVC
+          4 開發實戰等書籍。
+        </p>
+        <p>
+          <a href="http://blog.miniasp.com/">部落格 http://blog.miniasp.com</a>
+        </p>
+        <p>
+          <a href="https://www.facebook.com/will.fans/">FB 粉絲頁 https://www.facebook.com/will.fans</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="feedback bg_blue">
+  <div class="content title"><span>學員回饋</span></div>
+  <div class="content">
+    <div class="swiper feedbackSwiper aos-init swiper-initialized swiper-horizontal swiper-pointer-events" data-aos="zoom-out" data-duration="1000" data-aos-easing="ease-in-out">
+      <div class="swiper-wrapper" id="swiper-wrapper-b42652469e532de6" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(-1524px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" role="group" aria-label="4 / 6" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員D</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                曾經稍微接觸 Selenium ，所感受到的體驗就像保哥分享的，寫出來的腳本可讀性不好、也很常遇到這次寫的腳本下一次就不能用，
+                這次第一次接觸 PlayWright ，感受到滿滿的乾貨，非常謝謝保哥辛苦翻譯官方文件以及辛苦整理投影片。
+              </p>
+            </div>
+          </div>
+        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" role="group" aria-label="5 / 6" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員E</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                我本來是在寫 Seleium ，聽完這次課程後發現原來有這麼好用的東西，而且能聽到如此濃縮又精采的課程，
+                瞬間讓我測試的效率提升好幾個層次。
+              </p>
+            </div>
+          </div>
+        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="5" role="group" aria-label="6 / 6" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員F</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                之前寫過 Selenium、Protractor...等 End to End 測試，但發現後續很難維護。
+                上了這堂課後，才知道應該要用正確的觀念和工具進行測試，畢竟老闆不會多給你額外的時間完成。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="1 / 6" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員A</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+            <p>
+              上完覺得這比大多的測試工具還要淺顯易懂，就算不太會程式開發的人，只需要聽完就可以實戰了。
+            </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="2 / 6" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員B</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                完全不用寫 code 就能完成腳本撰寫，是之前都沒想過的，收穫非常多，會試著在工作中導入，謝謝保哥的這堂課程。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3 / 6" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員C</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                透過此課程更加了解 Playwright的運用，能透過此課程來減少每次修改程式後都需重新測試所花費時間，
+                也能幫助將來在開發新功能時減少測試所需的時間及讓後續接手的人透過測試腳本能更快了解如何操作。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="3" role="group" aria-label="4 / 6" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員D</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                曾經稍微接觸 Selenium ，所感受到的體驗就像保哥分享的，寫出來的腳本可讀性不好、也很常遇到這次寫的腳本下一次就不能用，
+                這次第一次接觸 PlayWright ，感受到滿滿的乾貨，非常謝謝保哥辛苦翻譯官方文件以及辛苦整理投影片。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" data-swiper-slide-index="4" role="group" aria-label="5 / 6" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員E</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                我本來是在寫 Seleium ，聽完這次課程後發現原來有這麼好用的東西，而且能聽到如此濃縮又精采的課程，
+                瞬間讓我測試的效率提升好幾個層次。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="5" role="group" aria-label="6 / 6" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員F</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                之前寫過 Selenium、Protractor...等 End to End 測試，但發現後續很難維護。
+                上了這堂課後，才知道應該要用正確的觀念和工具進行測試，畢竟老闆不會多給你額外的時間完成。
+              </p>
+            </div>
+          </div>
+        </div>        
+      <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="1 / 6" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員A</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+            <p>
+              上完覺得這比大多的測試工具還要淺顯易懂，就算不太會程式開發的人，只需要聽完就可以實戰了。
+            </p>
+            </div>
+          </div>
+        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="2 / 6" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員B</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                完全不用寫 code 就能完成腳本撰寫，是之前都沒想過的，收穫非常多，會試著在工作中導入，謝謝保哥的這堂課程。
+              </p>
+            </div>
+          </div>
+        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="3 / 6" style="width: 478px; margin-right: 30px;">
+          <div class="feedback-card">            
+            <div class="info">
+              <div class="client">學員C</div>
+              <div class="comp"></div>
+            </div>
+            <div class="desc">
+              <p>
+                透過此課程更加了解 Playwright的運用，能透過此課程來減少每次修改程式後都需重新測試所花費時間，
+                也能幫助將來在開發新功能時減少測試所需的時間及讓後續接手的人透過測試腳本能更快了解如何操作。
+              </p>
+            </div>
+          </div>
+        </div></div>
+      <div class="swiper-pagination feedback-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span></div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+  </div>
+</div>
+<div class="logos online2">
+<div class="logos-content">
+<div class="logo_wrap">
+<img src="/assets/images/CUB.dbe5c12c.png" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/亞家logo.4e27c302.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/CT.6f3f0cb1.png" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/資拓logo.926b351e.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/頎邦logo.1f636b30.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/pchomelogo.a94e01b9.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/台北富邦銀行logo.e55e76aa.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/edelogo.fbdfb935.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/新光銀logo.5192ace9.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/錠嵂.348bb9c3.png" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/資訊工業.14b4eb2f.png" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/hilifelogo.a58a649c.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/元智logo.479c1e97.jpg" alt="">
+</div>
+<div class="logo_wrap">
+<img src="/assets/images/特力屋.97836f31.png" alt="">
+</div>
+</div>
+</div><div class="top contact-us">
+    <div class="top-container">
+        <div>
+            <img src="/assets/images/contact-us.ce4c135d.svg" alt="Contact Us" loading="lazy"><span>聯絡多奇</span>
+        </div>
+        <span>聯絡多奇為您提供最專業的協助！</span>
+    </div>
+</div>
+<div class="form contact-us">
+    <div class="form-container">
+        <form class="form-content" id="mainContactForm" autocomplete="off">
+            <input type="hidden" id="recaptchaToken" name="recaptchaToken" value="">
+            <div class="bg-img">
+                <img class="lg" src="/assets/images/bg.dfd3e318.png" alt="background image" loading="lazy">
+                <img class="sm" src="/assets/images/bg-sm.54a0cebc.png" alt="background image" loading="lazy">
+            </div>
+            <div class="form-input-field">
+                <label class="title" for="name">請問該如何稱呼您？</label>
+                <input type="text" id="name" name="name" required="" oninvalid="this.setCustomValidity('請填寫這個欄位')" oninput="this.setCustomValidity('');">
+            </div>
+            <div class="form-input-field">
+                <label class="title" for="email">電子信箱</label>
+                <input type="email" id="email" name="email" required="" oninvalid="this.setCustomValidity('請填寫這個欄位及確認 e-mail 格式正確 (地址包含@)')" oninput="this.setCustomValidity('');">
+            </div>
+            <div class="form-input-field">
+                <label class="title" for="tel">電話號碼</label>
+                <input type="tel" id="tel" name="tel" maxlength="30" required="" oninvalid="this.setCustomValidity('請填寫這個欄位，長度限制 30 字')" oninput="this.setCustomValidity('');">
+            </div>
+            <div class="form-input-field">
+                <label class="title" for="message">請問該如何協助您？</label>
+                <textarea rows="4" id="message" name="message" required="" oninvalid="this.setCustomValidity('請填寫這個欄位')" oninput="this.setCustomValidity('');"></textarea>
+            </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8B8pZjNM3xtLgFS0wg0AHZsSymoHHsaP7wpwmTFm8P5Yeff-kJn7Up5BvL_yLg_Yqx_fMSzTAeJDZ-5xqH57QEVgC7mRnkAGX9E3LHmqyJh1-d-TrcAgro05LWj257LV_np6a1JD04McFKglcc07cRg">
+            <button class="submit" type="submit">
+                <span class="text">提交</span><span class="bg"></span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<script src="/assets/contact.min.js" defer="" async=""></script>
+
+
+<footer>
+    <div class="container footer">
+        <div class="left">
+                <div class="block">
+                    <h2>
+                            <a href="/Consulting">顧問服務</a>
+                    </h2>
+                </div>
+                <div class="block">
+                    <h2>
+                            <a href="/CaseShare">案例分享</a>
+                    </h2>
+                </div>
+                <div class="block">
+                    <h2>
+                            <a href="/Training">教育訓練</a>
+                    </h2>
+                </div>
+                <div class="block">
+                    <h2>
+資訊雲端產品                    </h2>
+                            <a href="/CloudProducts/TWCA-SSL">TWCA SSL 憑證</a>
+                            <a href="/CloudProducts/Azure">Microsoft Azure</a>
+                            <a href="/CloudProducts/Office">Microsoft 365</a>
+                </div>
+                <div class="block">
+                    <h2>
+                            <a href="/AboutUs">關於多奇</a>
+                    </h2>
+                </div>
+                <div class="block">
+                    <h2>
+                            <a href="/JoinUs">加入多奇</a>
+                    </h2>
+                </div>
+                <div class="block">
+                    <h2>
+                            <a href="/ContactUs">聯絡我們</a>
+                    </h2>
+                </div>
+                <div class="block">
+                    <h2>
+                            <a href="/PrivacyPolicy">隱私權條款</a>
+                    </h2>
+                </div>
+        </div>
+        <div class="right">
+            <div>
+                <h2>公司資訊</h2>
+                <div class="block">
+                    <div class="icon">
+                        <img src="/assets/images/addr.4cdfc1a1.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <div>地址：</div>
+                        <div>台北市中山區中山北路一段82號7樓</div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="icon">
+                        <img src="/assets/images/phone.c5588c95.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <div>電話：</div>
+                        <div>(02)2322-2480 #10</div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="icon">
+                        <img src="/assets/images/fax.092bd7a5.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <div>傳真：</div>
+                        <div>(02)2341-8318</div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="icon">
+                        <img src="/assets/images/mail.e55729eb.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <div>Mail：</div>
+                        <div>service@miniasp.com</div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="icon">
+                        <img src="/assets/images/work.dac4d47e.svg" alt="">
+                    </div>
+                    <div class="content">
+                        <div>上班時間：</div>
+                        <div>每周一 ～ 周五： 9am to 6pm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<script defer="" src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script defer="" src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/MotionPathPlugin.min.js"></script>
+<script defer="" src="/assets/site.min.js?r=2"></script>
+
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5Z73T7X');</script>
+
+
+
+<script type="text/javascript" id="" charset="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g+"?ref\x3dgtm2";d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","gz8x7g5dz3");</script></body></html>
